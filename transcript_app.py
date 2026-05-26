@@ -39,7 +39,7 @@ from transcript_tool import (
 )
 
 APP_NAME = "OpenScribe Studio"
-APP_VERSION = "0.2.0"
+APP_VERSION = "0.2.1"
 APP_TAGLINE = "Local-first video and audio transcription"
 GITHUB_URL = "https://github.com/michaelxer/openscribe-studio"
 LATEST_RELEASE_API = "https://api.github.com/repos/michaelxer/openscribe-studio/releases/latest"

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 - 2026-05-26
+
+- Added release automation that publishes Windows and macOS zip assets to GitHub Releases.
+
 ## 0.2.0 - 2026-05-26
 
 - Rebranded the project as OpenScribe Studio.
