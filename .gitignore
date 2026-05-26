@@ -16,6 +16,9 @@ transcripts/
 transcripts_test/
 *_audio/
 
+# Local agent handoff notes
+handoff_doc/
+
 # Local media and cookies
 cookies.txt
 *.wav
