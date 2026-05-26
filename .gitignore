@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Build outputs
+build/
+dist/
+*.spec.bak
+
+# Runtime outputs
+temp_files/
+transcripts/
+transcripts_test/
+*_audio/
+
+# Local media and cookies
+cookies.txt
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.mov
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

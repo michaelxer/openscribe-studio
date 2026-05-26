@@ -1,0 +1,46 @@
+name: Build release artifacts
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+jobs:
+  windows:
+    name: Windows portable
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build portable app
+        shell: pwsh
+        run: .\build_windows_portable.ps1
+      - name: Package portable app
+        shell: pwsh
+        run: Compress-Archive -Path dist\OpenScribeStudio -DestinationPath OpenScribeStudio-windows-x64.zip -Force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenScribeStudio-windows-x64
+          path: OpenScribeStudio-windows-x64.zip
+
+  macos:
+    name: macOS app
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build app bundle
+        run: |
+          chmod +x build_macos_app.sh
+          ./build_macos_app.sh
+      - name: Package app bundle
+        run: ditto -c -k --sequesterRsrc --keepParent dist/OpenScribeStudio.app OpenScribeStudio-macos.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OpenScribeStudio-macos
+          path: OpenScribeStudio-macos.zip
