@@ -1,5 +1,9 @@
 # Changelog
 
+## Project Origin
+
+OpenScribe Studio started as a private transcription utility in December 2025 and was published as an open-source project on May 26, 2026.
+
 ## 0.2.1 - 2026-05-26
 
 - Added release automation that publishes Windows and macOS zip assets to GitHub Releases.

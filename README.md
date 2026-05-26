@@ -6,6 +6,12 @@ It is built for normal people first: creators, students, researchers, teachers, 
 
 OpenScribe Studio runs speech-to-text AI on your computer using Whisper through `faster-whisper`. Local files stay on your device. YouTube and other video links still need internet because the app must download the audio before it can transcribe it.
 
+## Project History
+
+OpenScribe Studio started as a private tool in December 2025 for my own transcription workflow. I used it to turn videos and audio into transcripts that could become notes, subtitles, research material, and source context for AI agents.
+
+After improving the desktop interface, progress tracking, cancel support, documentation, and release builds, I published it as an open-source project on May 26, 2026.
+
 ## What You Can Do With It
 
 - Create transcripts from MP4, MP3, WAV, MOV, MKV, and many other media files.
